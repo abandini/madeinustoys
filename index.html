@@ -3,17 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Made-in-USA Toys Marketplace | Independent American Toy Brands</title>
+    <title>Made in USA Toys Marketplace | Independent American Toy Brands</title>
     <meta name="description" content="Shop toys handcrafted in the USA. Discover wooden, STEM, and eco-friendly gifts with fast domestic shipping. Support local makers today.">
+    <link rel="canonical" href="https://madeinustoys.com/">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Favicon and Manifest -->
+    <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Made in USA Toys Marketplace | Independent American Toy Brands">
+    <meta property="og:description" content="Shop toys handcrafted in the USA. Discover wooden, STEM, and eco-friendly gifts with fast domestic shipping. Support local makers today.">
+    <meta property="og:image" content="https://madeinustoys.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://madeinustoys.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Made in USA Toys Marketplace | Independent American Toy Brands">
+    <meta name="twitter:description" content="Shop toys handcrafted in the USA. Discover wooden, STEM, and eco-friendly gifts with fast domestic shipping. Support local makers today.">
+    <meta name="twitter:image" content="https://madeinustoys.com/assets/og-image.jpg">
+    
+    <!-- JSON-LD Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Made in USA Toys",
+      "url":"https://madeinustoys.com",
+      "logo":"https://madeinustoys.com/assets/og-logo.png",
+      "sameAs":["https://www.instagram.com/madeinustoys","https://www.facebook.com/madeinustoys"]
+    }
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_MEASUREMENT_ID}');
+    </script>
 </head>
 <body>
+    <a href="#main" class="sr-only">Skip to content</a>
     <header>
         <div class="container header-container">
-            <div class="logo">MadeIn<span>US</span>Toys</div>
+            <div class="logo">Made in <span>USA</span> Toys</div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -26,7 +63,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <!-- 1.1 Hero Section -->
         <section class="hero">
             <div class="container">

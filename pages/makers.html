@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meet Independent U.S. Toy Makers – MadeInUSToys.com</title>
+    <title>Meet Independent U.S. Toy Makers – Made in USA Toys</title>
     <meta name="description" content="Discover toy makers from across America creating quality toys. Browse by category, state, or material and support local craftsmanship.">
+    <link rel="canonical" href="https://madeinustoys.com/pages/makers.html">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../images/favicon.png">
+    
+    <!-- Favicon and Manifest -->
+    <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Meet Independent U.S. Toy Makers – Made in USA Toys">
+    <meta property="og:description" content="Discover toy makers from across America creating quality toys. Browse by category, state, or material and support local craftsmanship.">
+    <meta property="og:image" content="https://madeinustoys.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://madeinustoys.com/pages/makers.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Meet Independent U.S. Toy Makers – Made in USA Toys">
+    <meta name="twitter:description" content="Discover toy makers from across America creating quality toys. Browse by category, state, or material and support local craftsmanship.">
+    <meta name="twitter:image" content="https://madeinustoys.com/assets/og-image.jpg">
+    
+    <!-- JSON-LD Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Made in USA Toys",
+      "url":"https://madeinustoys.com",
+      "logo":"https://madeinustoys.com/assets/og-logo.png",
+      "sameAs":["https://www.instagram.com/madeinustoys","https://www.facebook.com/madeinustoys"]
+    }
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_MEASUREMENT_ID}');
+    </script>
+    
+    <!-- Fuse.js for client-side search and filtering -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
 </head>
 <body>
+    <a href="#main" class="sr-only">Skip to content</a>
     <header>
         <div class="container header-container">
-            <div class="logo"><a href="../index.html">MadeIn<span>US</span>Toys</a></div>
+            <div class="logo"><a href="../index.html">Made in <span>USA</span> Toys</a></div>
             <nav>
                 <ul>
                     <li><a href="../index.html">Home</a></li>
@@ -26,31 +66,41 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <section class="container" style="padding: 4rem 0;">
             <h1>Meet Independent U.S. Toy Makers</h1>
             <p style="max-width: 800px; margin-bottom: 2rem;">
                 From Appalachian woodshops to Pacific Northwest robotics labs, every maker here designs, cuts, paints, and packages right on American soil. Browse by category, state, or material, and feel good about every purchase.
             </p>
             
-            <div class="filter-options" style="margin-bottom: 2rem;">
-                <select id="category-filter">
-                    <option value="">All Categories</option>
-                    <option value="wood">Wooden Toys</option>
-                    <option value="plush">Plush & Dolls</option>
-                    <option value="stem">STEM & Educational</option>
-                    <option value="eco">Eco-Friendly</option>
-                </select>
+            <div class="search-and-filter" style="margin-bottom: 2rem;">
+                <div class="search-box" style="margin-bottom: 1rem;">
+                    <input type="text" id="maker-search" placeholder="Search makers..." style="width: 100%; padding: 0.75rem; border: 1px solid var(--border-color); border-radius: 0.375rem;">
+                </div>
                 
-                <select id="state-filter">
-                    <option value="">All States</option>
-                    <option value="CA">California</option>
-                    <option value="NY">New York</option>
-                    <option value="OH">Ohio</option>
-                    <option value="VT">Vermont</option>
-                    <option value="NC">North Carolina</option>
-                    <!-- More states would be added here -->
-                </select>
+                <div class="filter-options" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <select id="category-filter" aria-label="Filter by category">
+                        <option value="">All Categories</option>
+                        <option value="wood">Wooden Toys</option>
+                        <option value="plush">Plush & Dolls</option>
+                        <option value="stem">STEM & Educational</option>
+                        <option value="eco">Eco-Friendly</option>
+                    </select>
+                    
+                    <select id="state-filter" aria-label="Filter by state">
+                        <option value="">All States</option>
+                        <option value="CA">California</option>
+                        <option value="NY">New York</option>
+                        <option value="OH">Ohio</option>
+                        <option value="VT">Vermont</option>
+                        <option value="NC">North Carolina</option>
+                        <option value="ME">Maine</option>
+                        <option value="WA">Washington</option>
+                        <option value="TX">Texas</option>
+                        <option value="CO">Colorado</option>
+                        <option value="PA">Pennsylvania</option>
+                    </select>
+                </div>
             </div>
             
             <div class="makers-grid">
@@ -62,9 +112,9 @@
                         <!-- Image would go here in production -->
                     </div>
                     <div class="maker-card-content">
-                        <h3>Green Mountain Toys</h3>
+                        <h2 class="maker-name">Green Mountain Toys</h2>
                         <p>Heirloom-quality wooden toys from sustainable maple forests</p>
-                        <a href="makers/green-mountain-toys.html" class="btn btn-secondary">View Profile</a>
+                        <a href="makers/green-mountain-toys.html" class="btn btn-secondary" aria-label="View Green Mountain Toys profile">View Profile</a>
                     </div>
                 </div>
                 
@@ -75,9 +125,9 @@
                         <!-- Image would go here in production -->
                     </div>
                     <div class="maker-card-content">
-                        <h3>Heartland Plush</h3>
+                        <h2 class="maker-name">Heartland Plush</h2>
                         <p>Organic cotton stuffed animals, handstitched with love</p>
-                        <a href="makers/heartland-plush.html" class="btn btn-secondary">View Profile</a>
+                        <a href="makers/heartland-plush.html" class="btn btn-secondary" aria-label="View Heartland Plush profile">View Profile</a>
                     </div>
                 </div>
                 
@@ -88,9 +138,9 @@
                         <!-- Image would go here in production -->
                     </div>
                     <div class="maker-card-content">
-                        <h3>Future Builders</h3>
+                        <h2 class="maker-name">Future Builders</h2>
                         <p>Award-winning STEM kits that make robotics accessible to young minds</p>
-                        <a href="makers/future-builders.html" class="btn btn-secondary">View Profile</a>
+                        <a href="makers/future-builders.html" class="btn btn-secondary" aria-label="View Future Builders profile">View Profile</a>
                     </div>
                 </div>
                 
@@ -101,9 +151,9 @@
                         <!-- Image would go here in production -->
                     </div>
                     <div class="maker-card-content">
-                        <h3>Southern Oak Workshop</h3>
+                        <h2 class="maker-name">Southern Oak Workshop</h2>
                         <p>Classic wooden vehicles from reclaimed Appalachian hardwoods</p>
-                        <a href="makers/southern-oak-workshop.html" class="btn btn-secondary">View Profile</a>
+                        <a href="makers/southern-oak-workshop.html" class="btn btn-secondary" aria-label="View Southern Oak Workshop profile">View Profile</a>
                     </div>
                 </div>
                 
@@ -114,9 +164,9 @@
                         <!-- Image would go here in production -->
                     </div>
                     <div class="maker-card-content">
-                        <h3>Brooklyn Puzzle Co.</h3>
+                        <h2 class="maker-name">Brooklyn Puzzle Co.</h2>
                         <p>Educational puzzles that celebrate American landmarks and history</p>
-                        <a href="makers/brooklyn-puzzle-co.html" class="btn btn-secondary">View Profile</a>
+                        <a href="makers/brooklyn-puzzle-co.html" class="btn btn-secondary" aria-label="View Brooklyn Puzzle Co. profile">View Profile</a>
                     </div>
                 </div>
                 
@@ -127,9 +177,9 @@
                         <!-- Image would go here in production -->
                     </div>
                     <div class="maker-card-content">
-                        <h3>Coastal Creations</h3>
+                        <h2 class="maker-name">Coastal Creations</h2>
                         <p>Nautical-themed toys inspired by New England's maritime heritage</p>
-                        <a href="makers/coastal-creations.html" class="btn btn-secondary">View Profile</a>
+                        <a href="makers/coastal-creations.html" class="btn btn-secondary" aria-label="View Coastal Creations profile">View Profile</a>
                     </div>
                 </div>
             </div>
@@ -177,15 +227,79 @@
     </footer>
 
     <script>
-        // Simple filter functionality for the makers grid
-        // In a production environment, this would be more robust and likely server-side
-        document.getElementById('category-filter').addEventListener('change', filterMakers);
-        document.getElementById('state-filter').addEventListener('change', filterMakers);
+        // Maker data - In a real implementation, this would come from a backend API or JSON file
+        const makers = [
+            { name: "Green Mountain Toys", category: "wood", state: "VT", description: "Heirloom-quality wooden toys from sustainable maple forests", url: "makers/green-mountain-toys.html" },
+            { name: "Heartland Plush", category: "plush", state: "OH", description: "Organic cotton stuffed animals, handstitched with love", url: "makers/heartland-plush.html" },
+            { name: "Future Builders", category: "stem", state: "CA", description: "Award-winning STEM kits that make robotics accessible to young minds", url: "makers/future-builders.html" },
+            { name: "Southern Oak Workshop", category: "wood", state: "NC", description: "Classic wooden vehicles from reclaimed Appalachian hardwoods", url: "makers/southern-oak-workshop.html" },
+            { name: "Brooklyn Puzzle Co.", category: "eco", state: "NY", description: "Educational puzzles that celebrate American landmarks and history", url: "makers/brooklyn-puzzle-co.html" },
+            { name: "Coastal Creations", category: "wood", state: "ME", description: "Nautical-themed toys inspired by New England's maritime heritage", url: "makers/coastal-creations.html" }
+        ];
         
-        function filterMakers() {
-            // This is a placeholder function for demonstration purposes
-            // In a real implementation, this would filter the makers grid
-            alert('Filtering functionality would be implemented here with actual data');
+        // Initialize Fuse.js for search
+        const fuseOptions = {
+            keys: ['name', 'description'],
+            threshold: 0.3,
+            includeScore: true
+        };
+        const fuse = new Fuse(makers, fuseOptions);
+        
+        // Add event listeners for search and filters
+        document.getElementById('maker-search').addEventListener('input', applyFilters);
+        document.getElementById('category-filter').addEventListener('change', applyFilters);
+        document.getElementById('state-filter').addEventListener('change', applyFilters);
+        
+        function applyFilters() {
+            const searchTerm = document.getElementById('maker-search').value;
+            const categoryFilter = document.getElementById('category-filter').value;
+            const stateFilter = document.getElementById('state-filter').value;
+            
+            // Start with all makers or filtered by search term
+            let filteredMakers = searchTerm.trim() === '' ? makers : fuse.search(searchTerm).map(result => result.item);
+            
+            // Apply category filter if selected
+            if (categoryFilter) {
+                filteredMakers = filteredMakers.filter(maker => maker.category === categoryFilter);
+            }
+            
+            // Apply state filter if selected
+            if (stateFilter) {
+                filteredMakers = filteredMakers.filter(maker => maker.state === stateFilter);
+            }
+            
+            // Display makers based on filters
+            displayMakers(filteredMakers);
+        }
+        
+        function displayMakers(filteredMakers) {
+            // In a real implementation, this would dynamically generate the maker cards
+            // For this demo, we're just showing/hiding the existing cards based on the filter results
+            const makerCards = document.querySelectorAll('.maker-card');
+            const makerNames = Array.from(makerCards).map(card => card.querySelector('.maker-name').textContent);
+            
+            // Hide/show cards based on filter results
+            makerCards.forEach((card, index) => {
+                const name = makerNames[index];
+                const matchingMaker = filteredMakers.find(maker => maker.name === name);
+                card.style.display = matchingMaker ? 'block' : 'none';
+            });
+            
+            // Show message if no results
+            const makersGrid = document.querySelector('.makers-grid');
+            const noResultsMessage = document.getElementById('no-results-message') || (() => {
+                const message = document.createElement('p');
+                message.id = 'no-results-message';
+                message.style.textAlign = 'center';
+                message.style.gridColumn = '1 / -1';
+                message.style.padding = '2rem';
+                message.style.display = 'none';
+                message.textContent = 'No makers found matching your criteria. Try adjusting your filters.';
+                makersGrid.appendChild(message);
+                return message;
+            })();
+            
+            noResultsMessage.style.display = filteredMakers.length === 0 ? 'block' : 'none';
         }
     </script>
 </body>

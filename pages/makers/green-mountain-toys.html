@@ -3,17 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Mountain Toys - Handcrafted in Vermont | MadeInUSToys.com</title>
+    <title>Green Mountain Toys - Handcrafted in Vermont | Made in USA Toys</title>
     <meta name="description" content="Discover heirloom-quality wooden toys handcrafted in Vermont using sustainable local maple. Fast shipping from our workshop to your door.">
+    <link rel="canonical" href="https://madeinustoys.com/pages/makers/green-mountain-toys.html">
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../../images/favicon.png">
+    
+    <!-- Favicon and Manifest -->
+    <link rel="icon" href="/assets/favicon.ico" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Green Mountain Toys - Handcrafted in Vermont | Made in USA Toys">
+    <meta property="og:description" content="Discover heirloom-quality wooden toys handcrafted in Vermont using sustainable local maple. Fast shipping from our workshop to your door.">
+    <meta property="og:image" content="https://madeinustoys.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://madeinustoys.com/pages/makers/green-mountain-toys.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Green Mountain Toys - Handcrafted in Vermont | Made in USA Toys">
+    <meta name="twitter:description" content="Discover heirloom-quality wooden toys handcrafted in Vermont using sustainable local maple. Fast shipping from our workshop to your door.">
+    <meta name="twitter:image" content="https://madeinustoys.com/assets/og-image.jpg">
+    
+    <!-- JSON-LD Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context":"https://schema.org",
+      "@type":"Organization",
+      "name":"Made in USA Toys",
+      "url":"https://madeinustoys.com",
+      "logo":"https://madeinustoys.com/assets/og-logo.png",
+      "sameAs":["https://www.instagram.com/madeinustoys","https://www.facebook.com/madeinustoys"]
+    }
+    </script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '${GA_MEASUREMENT_ID}');
+    </script>
+    
+    <!-- Shopify Buy Button JS SDK -->
+    <script src="https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js"></script>
 </head>
 <body>
+    <a href="#main" class="sr-only">Skip to content</a>
     <header>
         <div class="container header-container">
-            <div class="logo"><a href="../../index.html">MadeIn<span>US</span>Toys</a></div>
+            <div class="logo"><a href="../../index.html">Made in <span>USA</span> Toys</a></div>
             <nav>
                 <ul>
                     <li><a href="../../index.html">Home</a></li>
@@ -26,7 +66,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main">
         <!-- 3.1 Banner -->
         <section class="profile-banner">
             <div class="container">
@@ -51,39 +91,39 @@
                     <!-- Product 1 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <!-- Product image would go here in production -->
+                            <img src="https://via.placeholder.com/400x300" alt="Vermont Express Train Set" width="400" height="300" loading="lazy">
                         </div>
                         <div class="product-content">
                             <h3>Vermont Express Train Set</h3>
                             <p>Hand-carved maple locomotive with three connecting cars. Non-toxic finish safe for all ages.</p>
                             <div class="price">$49.95</div>
-                            <a href="#" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Add to Cart</a>
+                            <div id="buy-btn-6545642046561" class="shopify-buy-button" style="margin-top: 1rem;"></div>
                         </div>
                     </div>
 
                     <!-- Product 2 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <!-- Product image would go here in production -->
+                            <img src="https://via.placeholder.com/400x300" alt="Stacking Rainbow Arch" width="400" height="300" loading="lazy">
                         </div>
                         <div class="product-content">
                             <h3>Stacking Rainbow Arch</h3>
                             <p>12-piece wooden stacking toy in vibrant colors. Perfect for developing motor skills.</p>
                             <div class="price">$34.95</div>
-                            <a href="#" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Add to Cart</a>
+                            <div id="buy-btn-6545642079329" class="shopify-buy-button" style="margin-top: 1rem;"></div>
                         </div>
                     </div>
 
                     <!-- Product 3 -->
                     <div class="product-card">
                         <div class="product-image">
-                            <!-- Product image would go here in production -->
+                            <img src="https://via.placeholder.com/400x300" alt="Wilderness Animal Set" width="400" height="300" loading="lazy">
                         </div>
                         <div class="product-content">
                             <h3>Wilderness Animal Set</h3>
                             <p>Six hand-carved woodland creatures native to New England forests.</p>
                             <div class="price">$39.95</div>
-                            <a href="#" class="btn btn-primary" style="margin-top: 1rem; width: 100%;">Add to Cart</a>
+                            <div id="buy-btn-6545642112097" class="shopify-buy-button" style="margin-top: 1rem;"></div>
                         </div>
                     </div>
 
@@ -184,5 +224,39 @@
             </div>
         </div>
     </footer>
+    <!-- Initialize Shopify Buy Buttons -->    
+    <script>
+        (function() {
+            /* Initialize Shopify Buy SDK */
+            var client = ShopifyBuy.buildClient({
+                domain: 'green-mountain-toys.myshopify.com',
+                storefrontAccessToken: 'your-storefront-access-token-here'
+            });
+            
+            /* Create the product buy buttons */
+            ShopifyBuy.UI.onReady(client).then(function(ui) {
+                // Vermont Express Train Set
+                ui.createComponent('product', {
+                    id: '6545642046561',
+                    node: document.getElementById('buy-btn-6545642046561'),
+                    moneyFormat: '${amount}'
+                });
+                
+                // Stacking Rainbow Arch
+                ui.createComponent('product', {
+                    id: '6545642079329',
+                    node: document.getElementById('buy-btn-6545642079329'),
+                    moneyFormat: '${amount}'
+                });
+                
+                // Wilderness Animal Set
+                ui.createComponent('product', {
+                    id: '6545642112097',
+                    node: document.getElementById('buy-btn-6545642112097'),
+                    moneyFormat: '${amount}'
+                });
+            });
+        })();
+    </script>
 </body>
 </html>
