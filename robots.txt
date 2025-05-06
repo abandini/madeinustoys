@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /images/raw/
+Disallow: /css/src/
+Disallow: /js/src/
+
+# Allow all robots to index the site
+# but disallow raw image files, source CSS and JS
+
+Sitemap: https://madeinustoys.com/sitemap.xml
